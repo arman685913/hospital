@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "topic": "useState",
+    "question": "What is useState?",
+    "answer": "useState is a React hook that allows functional components to manage state."
+  },
+  {
+    "id": 2,
+    "topic": "useEffect",
+    "question": "Why is useEffect used?",
+    "answer": "useEffect is used to handle side effects such as API calls, event listeners, and timers."
+  },
+  {
+    "id": 3,
+    "topic": "props",
+    "question": "What are props?",
+    "answer": "Props are read-only data passed from a parent component to a child component."
+  },
+  {
+    "id": 4,
+    "topic": "contextAPI",
+    "question": "Why is the Context API used?",
+    "answer": "The Context API is used to share global data without prop drilling."
+  },
+  {
+    "id": 5,
+    "topic": "reactRouter",
+    "question": "What is React Router?",
+    "answer": "React Router is a library used to create multiple routes and navigation in a single-page application."
+  },
+  {
+    "id": 6,
+    "topic": "reactMemo",
+    "question": "What is React.memo?",
+    "answer": "React.memo is a higher-order component that prevents unnecessary re-renders if props do not change."
+  },
+  {
+    "id": 7,
+    "topic": "useCallback",
+    "question": "What is useCallback?",
+    "answer": "useCallback memoizes a function to prevent recreating the function on every render."
+  },
+  {
+    "id": 8,
+    "topic": "useMemo",
+    "question": "What is useMemo?",
+    "answer": "useMemo memoizes the result of expensive calculations to improve performance."
+  }
+]

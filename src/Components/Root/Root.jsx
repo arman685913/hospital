@@ -5,7 +5,7 @@ import { Outlet } from 'react-router';
 
 const Root = () => {
     return (
-        <div>
+        <div className='gFont bg-base-300'>
             <Nav></Nav>
             <Outlet></Outlet>
             <Footer></Footer>
