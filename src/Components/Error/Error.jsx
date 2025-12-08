@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const Error = () => {
+  const [error, setError] = useState(false);
+  const [loader,setLoader] = useState(true);
+
+  useEffect(()=> {
+    setTimeout(() => {
+    setError(true);
+    setLoader(false)
+  }, 1500);
+  },[])
+
+  
+
   return (
-    <div
-       className="flex flex-col items-center py-20 md:px-20 px-6"
-    >
+    <div>
+      <div className='md:py-6 py-3 md:px-10 px-6 text-center'>
+                {
+                loader && <div className='gap-3 flex justify-center'><span className="loading loading-bars loading-xs"></span>
+                <span className="loading loading-bars loading-sm"></span>
+                <span className="loading loading-bars loading-md"></span>
+                <span className="loading loading-bars loading-lg"></span>
+                <span className="loading loading-bars loading-xl"></span></div>
+            }
+            </div>
+      {
+        error &&      
+      <div
+       className="flex flex-col items-center py-20 md:px-20 px-6">
       <div className="md:w-[500px]">
         <img
           src="https://i.postimg.cc/vmh72rx5/file-folder-mascot-character-design-vector-166742-4413.avif"
@@ -47,6 +70,8 @@ const Error = () => {
           ⬅ Back to Home
         </Link>
       </div>
+    </div>
+    }
     </div>
   );
 };

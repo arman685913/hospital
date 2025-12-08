@@ -13,8 +13,8 @@ const Blogs = () => {
         }, 1500);
     },[])
     return (
-        <div className='pb-4'>
-            <div className='md:pt-6 pt-3 md:px-10 px-6 text-center'>
+        <div className=''>
+            <div className='md:py-6 py-3 md:px-10 px-6 text-center'>
                 {
                 loader && <div className='gap-3 flex justify-center'><span className="loading loading-bars loading-xs"></span>
                 <span className="loading loading-bars loading-sm"></span>
@@ -24,7 +24,7 @@ const Blogs = () => {
             }
             </div>
             {
-                questions.map(question => <div key={question.id} className='md:pt-6 pt-3 md:px-10 px-6'>
+                questions.map(question => <div key={question.id} className='md:pb-6 pb-3 md:px-10 px-6'>
             <div className="collapse collapse-arrow bg-base-100 border border-base-300">
               <input type="radio" name="my-accordion-2" defaultChecked />
               <div className="collapse-title font-semibold">{question.question}</div>

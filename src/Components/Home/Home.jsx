@@ -17,7 +17,7 @@ const Home = () => {
             setTimeout(() => {
                 setDoctors(allDoctors)
                 setLoader(false)
-            }, 4500);
+            }, 1500);
         },[])
 
     const [visibleCount, setVisibleCount] = useState(6);
