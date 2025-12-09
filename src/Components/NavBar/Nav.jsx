@@ -53,7 +53,9 @@ const Nav = () => {
                 </div>
                 <div className='flex items-center gap-3'>
                 <img className='md:w-[30%] w-[15%]' src={logo} alt="logo.img" />
-                <a className="md:text-2xl  font-bold">Phudu</a>
+                <NavLink to='/' className="md:text-2xl  font-bold">
+                  Phudu
+                </NavLink>
                 </div>
               </div>
               <div className="navbar-center hidden lg:flex">

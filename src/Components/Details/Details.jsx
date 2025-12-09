@@ -1,13 +1,33 @@
-import React from 'react';
-import { FaRegRegistered } from 'react-icons/fa';
-import { useLoaderData, useParams } from 'react-router';
 
+import { FaRegRegistered } from 'react-icons/fa';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
+import { addItemToLS, getItemsFromLS } from '../../../public/localSt';
 const Details = () => {
+
   const { id } = useParams();
   const doctors = useLoaderData();
 
   const doctor = doctors.find(d => String(d.registrationNumber) === id);
 
+  
+
+  const navigate = useNavigate();
+
+  const handleBook = () => {
+    const storadeBooksData = getItemsFromLS();
+    const Id = storadeBooksData.map(id => id)
+    if(Id == id){
+      toast.warning(`Scheduled for ${doctor.name} Already Added`)
+      return;
+    } else {
+      toast.success(`Appointment Scheduled for ${doctor.name} Successfully`)
+      addItemToLS(id)
+      setTimeout(() => {
+        navigate('/book')
+      }, 5000);
+    }
+  }
 
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const dayOfWeek = days[new Date().getDay()];
@@ -15,11 +35,12 @@ const Details = () => {
 
   return (
     <div className='text-center px-4 md:px-10'>
+      <ToastContainer />
       {/* Header Section */}
       <div className='my-5 bg-white p-6 md:p-10 rounded-2xl'>
         <h1 className='text-2xl md:text-3xl font-bold'>Doctor’s Profile Details</h1>
         <p className='mt-2 text-sm md:text-base text-gray-400'>
-          Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis turpis imperdiet mattis donec dignissim volutpat.
+          Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis pis imperdiet mattis donec dignissim volutpat.
         </p>
       </div>
 
@@ -27,7 +48,7 @@ const Details = () => {
       <div className='md:my-5 my-3 flex flex-col md:flex-row lg:gap-6 md:gap-4 gap-2 items-center bg-white p-6 md:p-10 rounded-3xl'>
         {/* Image */}
         <div className='flex-shrink-0'>
-          <img className='w-full rounded-xl object-cover' src={doctor.image} alt={doctor.name} />
+          <img className='lg:w-[500px] md:w-[350px] w-[250px] rounded-xl object-cover' src={doctor.image} alt={doctor.name} />
         </div>
 
         {/* Text Info */}-
@@ -72,7 +93,7 @@ const Details = () => {
             : "Due to high patient volume, we are currently accepting appointments for next available day only. We appreciate your understanding and cooperation."}
         </p>
 
-        <button className='mt-3 w-full  text-white btn-primary btn rounded-3xl px-6 py-3'>
+        <button onClick={() => handleBook()} className='mt-3 w-full  text-white btn-primary btn rounded-3xl px-6 py-3'>
           Book Appointment Now
         </button>
       </div>

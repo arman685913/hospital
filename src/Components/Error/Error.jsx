@@ -24,7 +24,7 @@ const Error = () => {
                 <span className="loading loading-bars loading-lg"></span>
                 <span className="loading loading-bars loading-xl"></span></div>
             }
-            </div>
+      </div>
       {
         error &&      
       <div
@@ -54,19 +54,7 @@ const Error = () => {
           Sorry, the page you are looking for doesn’t exist or has been moved.
         </p>
 
-        <Link
-          to="/"
-          style={{
-            marginTop: "20px",
-            display: "inline-block",
-            padding: "10px 20px",
-            background: "#007bff",
-            color: "white",
-            borderRadius: "8px",
-            textDecoration: "none",
-            fontSize: "15px",
-          }}
-        >
+        <Link to="/" className="mt-5 inline-block px-5 py-2.5 bg-blue-600 text-white rounded-lg no-underline text-sm">
           ⬅ Back to Home
         </Link>
       </div>

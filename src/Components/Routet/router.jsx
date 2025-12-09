@@ -13,8 +13,8 @@ export const router = createBrowserRouter([
   {
     path: "/",
     Component : Root,
-    hydrateFallback: <div>Loading...</div>,
-    errorElement : <Error></Error>,
+    // hydrateFallback: <div>Loading...</div>,
+    // errorElement : <Error></Error>,
     children : [
         {
             index : true,
@@ -26,11 +26,16 @@ export const router = createBrowserRouter([
             Component: Home
         },
         {
-            path : 'app',
-            Component : App
+            path : '/*',
+            Component : Error
         },
         {
           path : '/book',
+          loader : async () =>{ 
+            const res = await fetch('/Doctors.json')
+            const data = await res.json()
+            return data
+          },
           Component : Book
         },
         {
