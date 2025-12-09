@@ -7,6 +7,7 @@ import Error from '../Error/Error.jsx';
 import Blogs from '../../Blogs/Blogs.jsx';
 import Details from '../Details/Details.jsx';
 import { createBrowserRouter } from 'react-router';
+import Error2 from '../Error/Error2.jsx';
 
 export const router = createBrowserRouter([
   {
@@ -17,30 +18,43 @@ export const router = createBrowserRouter([
     children : [
         {
             index : true,
-            loader : () => fetch('Doctors.json'),
-            element: <Home></Home>
+            loader : async () => {
+              const res = await fetch('/Doctors.json');
+              const data = await res.json();
+              return data;
+            },
+            Component: Home
         },
         {
             path : 'app',
             Component : App
         },
         {
-          path : 'book',
-          element : <Book></Book>
+          path : '/book',
+          Component : Book
         },
         {
-          path : 'blogs',
-          loader : () => fetch('blogs.json'),
+          path : '/blogs',
+          loader : async () =>{ 
+            const res = await fetch('/blogs.json')
+            const data = await res.json()
+            return data
+          },
           Component : Blogs
         },
         {
-          path : 'contact',
-          element : <Error></Error>
+          path : '/contact',
+          Component : Error
         },
         {
-          path : 'doctor/:id',
-          loader : () => fetch('Doctors.json'),
-          Component : Details
+          path : '/doctor/:id',
+          loader : async () =>{ 
+            const res = await fetch('/Doctors.json');
+            const data = await res.json();
+            return data ;
+          },
+          Component : Details,
+          errorElement : <Error2></Error2>
         },
     ],
   },

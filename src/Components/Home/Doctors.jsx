@@ -33,7 +33,7 @@ const Doctors = ({ doctor }) => {
           <p className="flex items-center gap-1"><FaRegRegistered />Reg No: {registrationNumber}</p>
         </div>
 
-        <Link to={`doctor/${registrationNumber}`} className='text-center'>
+        <Link to={`/doctor/${registrationNumber}`} className='text-center'>
           <div className='w-full rounded-4xl border p-2 my-3 flex justify-center hover:bg-primary text-blue-500 font-bold'>
             View Details
           </div>
