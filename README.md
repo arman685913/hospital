@@ -1,16 +1,30 @@
-# React + Vite
+# Hospital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Website:** [Hospital](https://hospital-a08.netlify.app/)  
+**Repository:** [GitHub Repository](https://github.com/arman685913/hospital.git)
 
-Currently, two official plugins are available:
+Hospital is a responsive web project designed to showcase healthcare services, doctors, and facilities. The website focuses on a clean layout, easy navigation, and informative content for users seeking medical assistance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Home Page: Engaging landing page with key hospital services and highlights.  
+* Doctor Profiles: Organized display of doctors with images, specialties, and contact info.  
+* Appointment / Booking Section: Allows users to view or simulate appointments.  
+* Responsive Design: Optimized for mobile, tablet, and desktop devices.  
+* Interactive Elements: Basic interactivity implemented with JavaScript.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+* HTML5  
+* CSS3 / Tailwind CSS  
+* JavaScript  
+* GitHub Pages / Netlify for hosting  
+
+---
+
+## Project Structure
+
