@@ -9,11 +9,11 @@ const Footer = () => {
     return (
         <div className='bg-white md:p-14 p-6 border-b'>
             <div className='flex flex-col  items-center border-b border-b-gray-300'>
-            <div className='flex items-center '>
+            <div className='flex items-center md:mb-0 mb-3'>
                 <div>
                     <img className='md:w-[80%] w-[60%]' src={logo} alt="logo.img" />
                 </div>
-                <a className="md:text-2xl font-bold">Phudu</a>
+                <a className="md:text-2xl font-bold dark:text-black">Phudu</a>
             </div>
             <div className=" my-3 navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-gray-500">

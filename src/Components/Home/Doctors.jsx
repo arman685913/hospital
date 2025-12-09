@@ -25,12 +25,12 @@ const Doctors = ({ doctor }) => {
         </div>
 
         <div className='pb-3 mb-3 border-b border-gray-400 border-dashed'>
-          <h2 className='text-2xl font-semibold'>{name}</h2>
+          <h2 className='text-2xl font-semibold dark:text-black'>{name}</h2>
           <p className='text-gray-500'>{education}</p>
         </div>
 
         <div>
-          <p className="flex items-center gap-1"><FaRegRegistered />Reg No: {registrationNumber}</p>
+          <p className="flex items-center gap-1 dark:text-black"><FaRegRegistered />Reg No: {registrationNumber}</p>
         </div>
 
         <Link to={`/doctor/${registrationNumber}`} className='text-center'>

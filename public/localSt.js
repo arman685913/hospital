@@ -12,7 +12,7 @@ export const deleteItemsFromLS = (id) => {
 export const addItemToLS = (id) => {
      const items = getItemsFromLS(); 
      if(items.includes(id)) { 
-        alert("Already Added"); 
+        return; 
      } else { items.push(id);
      localStorage.setItem('booked', JSON.stringify(items));
     }

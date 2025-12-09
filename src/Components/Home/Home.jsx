@@ -46,7 +46,7 @@ const Home = () => {
             <div className='md:p-10 p-5'>
             <div className='flex items-center  md:py-10 py-5  md:px-20 px-5 flex-col text-center bg-gradient-to-t from-white via-base-100 to-base-300 border-4 rounded-3xl bg-tr shadow border-white'>
                 <h1 className='font-bold md:text-4xl '>Dependable Care, Backed by Trusted Professionals.</h1>
-                <p className='text-gray-600 md:my-5 my-2 md:text-base text-xs'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
+                <p className='dark:text-gray-400 text-gray-500 md:my-5 my-2 md:text-base text-xs'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
                 <div className='flex justify-center items-center flex-col md:flex-row md:mb-5 mb-2 gap-3'>
                     <input type="search" placeholder='Search any doctor...' className='bg-white border border-gray-300 text-sm p-2 px-5  md:w-xl  rounded-3xl' name="" id="" />
                     <button className='btn  md:text-sm text-xs px-6 btn-primary rounded-3xl'>Search Now</button>
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
             <div className='text-center px-10'>
                 <h1 className='my-4 font-bold text-3xl'>Our Best Doctors</h1>
-                <p className='text-gray-500 mb-4'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
+                <p className='dark:text-gray-400 text-gray-500 mb-4'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
             </div>
             <div className='md:pt-6 pt-3 md:px-10 px-6 text-center'>
                 {
@@ -110,7 +110,7 @@ const Home = () => {
                 <div className='text-left bg-white rounded-xl shadow-md  py-5 px-7'>
                     <img className='my-4' src={Img1} alt="" />
                     {
-                        startCount && <h1 className='font-bold text-4xl'><CountUp
+                        startCount && <h1 className='font-bold dark:text-black text-4xl'><CountUp
                     start={1}
                     end={200}
                     duration={40}
@@ -121,7 +121,7 @@ const Home = () => {
                 <div className='text-left bg-white rounded-xl shadow-md  py-5 px-7'>
                     <img className='my-4' src={Img2} alt="" />
                     {
-                        startCount && <h1 className='font-bold text-4xl'><CountUp
+                        startCount && <h1 className='font-bold dark:text-black text-4xl'><CountUp 
                     start={10}
                     end={1957}
                     duration={40}
@@ -132,7 +132,7 @@ const Home = () => {
                 <div className='text-left bg-white rounded-xl shadow-md py-5 px-7'>
                     <img className='my-4' src={Img4} alt="" />
                     {
-                        startCount && <h1 className='font-bold text-4xl'><CountUp
+                        startCount && <h1 className='font-bold dark:text-black text-4xl'><CountUp
                     start={1}
                     end={325}
                     duration={40}
@@ -143,7 +143,7 @@ const Home = () => {
                 <div className='text-left bg-white rounded-xl shadow-md py-5 px-7'>
                     <img className='my-4' src={Img3} alt="" />
                     {
-                        startCount && <h1 className='font-bold lg:text-4xl md:text-3xl text-2xl '><CountUp
+                        startCount && <h1 className='font-bold dark:text-black text-4xl'><CountUp
                     start={10}
                     end={478}
                     duration={40}

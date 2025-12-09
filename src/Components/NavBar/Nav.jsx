@@ -4,7 +4,7 @@ import { NavLink } from 'react-router';
 
 const Nav = () => {
     return (
-        <div className='md:mx-10'>
+        <div className='md:mx-10 mr-3'>
             <div className="navbar">
               <div className="navbar-start">
                 <div className="dropdown">
@@ -14,7 +14,7 @@ const Nav = () => {
                   <ul
                     tabIndex="-1"
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li>
+                        <li className='my-1'> 
                           <NavLink 
                             to="/" 
                             className={({ isActive }) => isActive ? "text-primary font-bold" : ""}
@@ -23,7 +23,7 @@ const Nav = () => {
                           </NavLink>
                         </li>
 
-                        <li>
+                        <li className='my-1'>
                           <NavLink 
                             to="/book" 
                             className={({ isActive }) => isActive ? "text-primary font-bold" : ""}
@@ -32,7 +32,7 @@ const Nav = () => {
                           </NavLink>
                         </li>
 
-                        <li>
+                        <li className='my-1'>
                           <NavLink 
                             to="/blogs" 
                             className={({ isActive }) => isActive ? "text-primary font-bold" : ""}
@@ -41,7 +41,7 @@ const Nav = () => {
                           </NavLink>
                         </li>
 
-                        <li>
+                        <li className='my-1'>
                           <NavLink 
                             to="/contact" 
                             className={({ isActive }) => isActive ? "text-primary font-bold" : ""}
@@ -53,7 +53,7 @@ const Nav = () => {
                 </div>
                 <div className='flex items-center gap-3'>
                 <img className='md:w-[30%] w-[15%]' src={logo} alt="logo.img" />
-                <NavLink to='/' className="md:text-2xl  font-bold">
+                <NavLink to='/' className="md:text-2xl text-xl font-bold">
                   Phudu
                 </NavLink>
                 </div>

@@ -13,8 +13,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     Component : Root,
-    // hydrateFallback: <div>Loading...</div>,
-    // errorElement : <Error></Error>,
+  
     children : [
         {
             index : true,
@@ -26,7 +25,7 @@ export const router = createBrowserRouter([
             Component: Home
         },
         {
-            path : '/*',
+            path : '*',
             Component : Error
         },
         {

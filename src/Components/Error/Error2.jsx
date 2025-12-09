@@ -9,7 +9,7 @@ const Error2 = () => {
     return (
         <div className='flex flex-col items-center justify-center min-h-screen text-center px-4'>
             <h1 className='text-5xl font-bold text-red-500 mb-4'>Doctor Not Found!</h1>
-            <p className='text-gray-600 mb-6 text-lg'>
+            <p className='text-gray-500 mb-6 text-lg'>
                 No Doctor Found with this Registration Number
             </p>
             <div className='flex items-center gap-2 mb-6 text-xl text-blue-500'>
