@@ -33,7 +33,7 @@ const Details = () => {
       <ToastContainer />
       <div className='my-5 bg-white p-6 md:p-10 rounded-2xl'>
         <h1 className='text-2xl md:text-3xl font-bold dark:text-black'>Doctor’s Profile Details</h1>
-        <p className='mt-2 text-sm md:text-gray-500'>
+        <p className='mt-2 text-sm text-gray-500'>
           Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis pis imperdiet mattis donec dignissim volutpat.
         </p>
       </div>
